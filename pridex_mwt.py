@@ -94,9 +94,9 @@ def send_data_to_pridex(chrome):
         except:
             pass
 
-    print(mcrs3["IcGain"])
-    print(mcrs3["Mean Charge"])
-    print(mcrs3["Charge Sigma"])
+    print("IcGain : " + mcrs3["IcGain"])
+    print("Mean Charge : " + mcrs3["Mean Charge"])
+    print("Charge Sigma : " + mcrs3["Charge Sigma"])
 
     while True:
         if yes_or_no("Did you finish your MWT and save the data ?"):

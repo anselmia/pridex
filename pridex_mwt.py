@@ -158,9 +158,7 @@ def access_mcrs3():
                 lookuptimes.append(filename.split("_")[2].replace(".csv", ""))
 
         lastlookuptime = max(lookuptimes)
-        lookup_filename = [lookup for lookup in files if lastlookuptime in lookup]
-        if len(lookup_filename) > 0:
-            lookup_filename = files[0]
+        lookup_filename = next(lookup for lookup in files if lastlookuptime in lookup)
 
         if lookup_filename != "":
             fileObject = sftp.file(
